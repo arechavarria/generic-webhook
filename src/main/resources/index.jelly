@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-    TODO
+    The Generic Webhook endpoint is available at <code>/generic-webhook/&lt;pipelineName&gt;</code>.
 </div>

@@ -2,12 +2,17 @@
 
 ## Introduction
 
-TODO Describe what your plugin does here
+Generic Webhook is a simple Jenkins plugin that exposes a public endpoint to
+trigger pipelines from external systems. Requests are sent to
+`/generic-webhook/{pipelineName}` using the `POST` method with any JSON body.
+The JSON payload is forwarded to the triggered pipeline as a parameter named
+`webhookPayload`.
 
 ## Getting started
 
-TODO Tell users how to configure your plugin here, include screenshots, pipeline examples and 
-configuration-as-code examples.
+Configure your pipeline to declare a string parameter called `webhookPayload`.
+Then send a `POST` request to `/generic-webhook/<job name>` with your JSON
+payload. Inside the pipeline access it via `params.webhookPayload`.
 
 ## Issues
 
